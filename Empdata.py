@@ -1,3 +1,6 @@
+
+
+
 class Empdata:
     def total_sal(self,dataframe):
         sal = dataframe.sal
@@ -16,3 +19,4 @@ class Empdata:
     def sumsal(self,df):
 
         return df.sum("sal")
+

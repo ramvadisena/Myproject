@@ -11,12 +11,11 @@ class Emptest(emptestbaseclass):
         datacountfunc = Empdata().rowcount(self.df)
         self.assertEqual(datacountfunc, expecteddatacount)
 
-
     def test_totalsaldept(self):
         df2 =self.df
         aggdf = Empdata().aggvals(df2,"deptno","sal","totalsal")
         aggdf.show()
-        aggdf.sort("deptno").toPandas()
+        aggdf.sort('deptno').toPandas()
 
         outputvalues = aggdf.to_dict("list")["totalsal"][0]
 
